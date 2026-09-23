@@ -32,14 +32,15 @@ const products = [
     name: "Dress",
     price: 550000,
     status: "In Stock",
-    image: ,
+    image: './Images/Nu1.jpg', 
   },
   {
     id: 6,
     name: "Shirt",
     price: 350000,
     status: "In Stock",
-    image: ,
+    image: './Images/Nu2.jpg', 
   },
 ];
+
 export default products;

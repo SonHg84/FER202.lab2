@@ -20,11 +20,11 @@ function Header() {
                         <Nav.Link href="#link">Men</Nav.Link>
                         <Nav.Link href="#link">Woman</Nav.Link>
                         <Nav.Link href="#link">Contact</Nav.Link>
-                        <Nav.Link href="#link">
-                            <FaShoppingCart /> Cart (0)
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
+                <Nav.Item href="#link" className="text-end">
+                    <FaShoppingCart /> Cart (0)
+                </Nav.Item>
             </Navbar>
 
 
