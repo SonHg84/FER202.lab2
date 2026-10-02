@@ -1,34 +1,18 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { FaShoppingCart } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+
 function Header() {
+    const { darkMode, toggleTheme } = useContext(ThemeContext);
+
     return (
-        <Container className="text-center">
-            <div>HEADER</div>
-            <Navbar className="d-flex align-items-center justify-content-center">
-                <Navbar.Brand href="#home">
-                    <FaStar></FaStar>
-                    SHOP FASHION
-                </Navbar.Brand>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">
-
-                        </Nav.Link>
-                        <Nav.Link href="#link">Home</Nav.Link>
-                        <Nav.Link href="#link">Products</Nav.Link>
-                        <Nav.Link href="#link">Men</Nav.Link>
-                        <Nav.Link href="#link">Woman</Nav.Link>
-                        <Nav.Link href="#link">Contact</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-                <Nav.Item href="#link" className="text-end">
-                    <FaShoppingCart /> Cart (0)
-                </Nav.Item>
-            </Navbar>
-
-
-        </Container>
+            <header className="app-header" >
+                <div><h1>Mini Movie Manager</h1></div>
+                <div><button type="button" className="theme-button" onClick={toggleTheme}
+                    aria-label={darkMode ? 'Chuyển sang giao diện sáng' : 'Chuyển sang giao diện tối'}>
+                    <span aria-hidden="true">{darkMode ? '☀' : '☾'}</span>
+                    {darkMode ? 'Light' : 'Dark'}
+                </button></div>
+            </header>
     );
 }
 
